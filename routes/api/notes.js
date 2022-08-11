@@ -50,6 +50,16 @@ router.put('/:id', (req, res) => {
     else {
         res.status(400).json({ msg: `No notes found with the id of ${req.params.id}`});
     }
-})
+});
+
+router.delete('/:id', (req, res) => {
+    const found = notes.some(note => note.id === parseInt(req.params.id));
+    
+    if (found){
+        res.json({ msg: 'Note Deleted', notes: notes.filter(note => note.id !== parseInt(req.params.id))});
+    } else {
+        res.status(400),json({ msg: `No note with the id of ${req.params.id}`})
+    }
+});
 
 module.exports = router;
