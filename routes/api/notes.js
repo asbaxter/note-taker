@@ -1,6 +1,5 @@
 const { json } = require('express');
 const express = require('express');
-const { reset } = require('nodemon');
 const uuid = require('uuid');
 const router = express.Router();
 const notes = require('../../Notes');
