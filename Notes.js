@@ -1,9 +1,9 @@
-const notepad = [
+const notes = [
     {
         "title":"Test Title",
         "text":"Test text",
-        "id": "1"
+        "id": 1,
     }
-];
+]
 
-module.exports = notepad;
+module.exports = notes;

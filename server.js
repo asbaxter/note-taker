@@ -1,15 +1,15 @@
 const express = require('express');
 const path = require('path');
-const notepad = require('./Notepad')
 
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+// gets entire public folder and its content as static
 app.use(express.static(path.join(__dirname, 'public')));
 
-// gets all notes
-app.get('/notepad', (req, res) => {
-    res.json(notepad);
-});
+app.use('/api/notes', require('./routes/api/notes'))
 
 
 const PORT = process.env.PORT || 5000;
