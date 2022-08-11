@@ -34,7 +34,7 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-    const found = notes.some(note => note.id === parseInt(req.params.is));
+    const found = notes.some(note => note.id === parseInt(req.params.id));
 
     if(found) {
         const updNote = req.body;
