@@ -1,5 +1,7 @@
 # Note Taker
 
+![alt text](./public/assets/Screenshot%202022-08-14%20105053.png)
+
 [Link To Deployed Site](https://note-taker-asbaxter.herokuapp.com/)
 
 ## User Story
